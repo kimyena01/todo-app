@@ -1,0 +1,23 @@
+## todo 정보 보기(select * from todo);
+GET http://localhost:9000/todos
+
+//todo 생성(insert)
+POST http://localhost:9000/todo
+Content-Type: application/json
+
+{
+    "title" : "test todo"
+}
+
+## 수정하기
+PATCH http://localhost:9000/todo/1
+Content-Type: application/json
+
+{
+    "title": "수정된 할 일",
+    "done": true
+}
+
+# 삭제하기
+DELETE http://localhost:9000/todo/1
+
